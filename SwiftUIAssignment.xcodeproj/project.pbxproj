@@ -11,6 +11,13 @@
 		A0147DB32834C716002E8C70 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0147DB22834C716002E8C70 /* ContentView.swift */; };
 		A0147DB52834C718002E8C70 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A0147DB42834C718002E8C70 /* Assets.xcassets */; };
 		A0147DB82834C718002E8C70 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A0147DB72834C718002E8C70 /* Preview Assets.xcassets */; };
+		A0147DC22834CC28002E8C70 /* SBICardLoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0147DC12834CC28002E8C70 /* SBICardLoginView.swift */; };
+		A07538882834CE75008FFF3A /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = A07538872834CE75008FFF3A /* Constants.swift */; };
+		A075388D2834D046008FFF3A /* UserDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A075388C2834D046008FFF3A /* UserDetailsView.swift */; };
+		A075388F2834D45C008FFF3A /* MPINTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = A075388E2834D45C008FFF3A /* MPINTextField.swift */; };
+		A07538942834D5EA008FFF3A /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = A07538932834D5EA008FFF3A /* Color.swift */; };
+		A0E5CEFB2834F66100A0F723 /* QuickAccessView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0E5CEFA2834F66100A0F723 /* QuickAccessView.swift */; };
+		A0E5CEFD28350A3700A0F723 /* QuickAccessButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0E5CEFC28350A3700A0F723 /* QuickAccessButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +26,13 @@
 		A0147DB22834C716002E8C70 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		A0147DB42834C718002E8C70 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A0147DB72834C718002E8C70 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		A0147DC12834CC28002E8C70 /* SBICardLoginView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SBICardLoginView.swift; sourceTree = "<group>"; };
+		A07538872834CE75008FFF3A /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Constants.swift; path = SwiftUIAssignment/Constants.swift; sourceTree = SOURCE_ROOT; };
+		A075388C2834D046008FFF3A /* UserDetailsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDetailsView.swift; sourceTree = "<group>"; };
+		A075388E2834D45C008FFF3A /* MPINTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MPINTextField.swift; sourceTree = "<group>"; };
+		A07538932834D5EA008FFF3A /* Color.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
+		A0E5CEFA2834F66100A0F723 /* QuickAccessView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuickAccessView.swift; sourceTree = "<group>"; };
+		A0E5CEFC28350A3700A0F723 /* QuickAccessButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuickAccessButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +67,9 @@
 			children = (
 				A0147DB02834C716002E8C70 /* SwiftUIAssignmentApp.swift */,
 				A0147DB22834C716002E8C70 /* ContentView.swift */,
+				A07538872834CE75008FFF3A /* Constants.swift */,
+				A07538922834D5EA008FFF3A /* Extensions */,
+				A0147DC02834CC28002E8C70 /* Views */,
 				A0147DB42834C718002E8C70 /* Assets.xcassets */,
 				A0147DB62834C718002E8C70 /* Preview Content */,
 			);
@@ -65,6 +82,34 @@
 				A0147DB72834C718002E8C70 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		A0147DC02834CC28002E8C70 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				A075388B2834D046008FFF3A /* SBICard */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		A075388B2834D046008FFF3A /* SBICard */ = {
+			isa = PBXGroup;
+			children = (
+				A0147DC12834CC28002E8C70 /* SBICardLoginView.swift */,
+				A075388C2834D046008FFF3A /* UserDetailsView.swift */,
+				A075388E2834D45C008FFF3A /* MPINTextField.swift */,
+				A0E5CEFA2834F66100A0F723 /* QuickAccessView.swift */,
+				A0E5CEFC28350A3700A0F723 /* QuickAccessButton.swift */,
+			);
+			path = SBICard;
+			sourceTree = "<group>";
+		};
+		A07538922834D5EA008FFF3A /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				A07538932834D5EA008FFF3A /* Color.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,8 +182,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A0147DC22834CC28002E8C70 /* SBICardLoginView.swift in Sources */,
 				A0147DB32834C716002E8C70 /* ContentView.swift in Sources */,
+				A0E5CEFB2834F66100A0F723 /* QuickAccessView.swift in Sources */,
+				A07538942834D5EA008FFF3A /* Color.swift in Sources */,
 				A0147DB12834C716002E8C70 /* SwiftUIAssignmentApp.swift in Sources */,
+				A075388D2834D046008FFF3A /* UserDetailsView.swift in Sources */,
+				A0E5CEFD28350A3700A0F723 /* QuickAccessButton.swift in Sources */,
+				A07538882834CE75008FFF3A /* Constants.swift in Sources */,
+				A075388F2834D45C008FFF3A /* MPINTextField.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

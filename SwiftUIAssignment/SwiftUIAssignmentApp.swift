@@ -11,7 +11,8 @@ import SwiftUI
 struct SwiftUIAssignmentApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+//            ContentView()
+            SBICardLoginView()
         }
     }
 }
