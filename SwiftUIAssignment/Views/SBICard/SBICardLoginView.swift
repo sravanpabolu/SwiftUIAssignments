@@ -34,44 +34,26 @@ struct SBICardLoginView: View {
     
     var quickAccessView: some View {
         QuickAccessView()
-            .padding()
+//            .padding()
     }
     
     var btnGetInTouch: some View {
-        Button {
+        Button (Constants.Texts.get_in_touch) {
             print("Get in touch Button Tapped")
-        } label: {
-            Text(Constants.Texts.get_in_touch)
-                .foregroundColor(.black)
-                .frame(
-                    width: UIScreen.main.bounds.width,
-                    height: buttonHeight,
-                    alignment: .center)
-                .padding()
-                .background(Color.btnBGColor)
-                .foregroundColor(Color.btnBGColor)
         }
+        .buttonStyle(YellowButton())
     }
     
     var btnExplore: some View {
-        Button {
+        Button(Constants.Texts.explore) {
             print("Explore Button Tapped")
-        } label: {
-            Text(Constants.Texts.explore)
-                .foregroundColor(.black)
-            .frame(
-                width: UIScreen.main.bounds.width,
-                height: buttonHeight,
-                alignment: .center)
-            .padding()
-            .background(Color.btnBGColor)
-            .foregroundColor(Color.btnBGColor)
         }
+        .buttonStyle(YellowButton())
     }
     
     var versionView: some View {
         Text("Version Number: 7.3.15")
-            .foregroundColor(.fontColor)
+            .foregroundColor(.blueFontColor)
             .padding()
     }
 }

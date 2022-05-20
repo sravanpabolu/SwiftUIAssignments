@@ -11,9 +11,7 @@ struct QuickAccessView: View {
     
     private let buttonWidth = 50.0
     private let buttonHeight = 70.0
-//    private let buttonImgWidth = 60.0
-//    private let buttonImgHeight = 80.0
-    private let buttonTextWidth = 100.0
+    fileprivate let buttonTextWidth = 100.0
     private let fontSize = 11.0
     
     var body: some View {
@@ -27,6 +25,7 @@ struct QuickAccessView: View {
                 btnOffers
             }
         }
+        .background(.green)
     }
     
     var titleView: some View {
@@ -42,65 +41,45 @@ struct QuickAccessView: View {
     }
     
     var btnCardPay: some View {
-        VStack {
-            Button {
-                print("Card Pay button tapped")
-            } label: {
-                VStack {
-                    Image(Constants.Images.card_pay)
-                        .resizable()
-                    Text(Constants.Texts.card_pay)
-                        .font(.system(size: fontSize))
-                        .fontWeight(.bold)
-                        .foregroundColor(Color.fontColor)
-                        .frame(width: buttonTextWidth)
-                }
-            }
+        CustomButton(btnTitle: Constants.Texts.card_pay, btnImage: Constants.Images.card_pay) {
+            print("Card Pay button tapped")
         }
-        .frame(width: buttonWidth,
-               height: buttonHeight,
-               alignment: .center)
     }
     
     var btnQRPay: some View {
-        VStack {
-            Button {
-                print("Scan to Pay button tapped")
-            } label: {
-                VStack {
-                    Image(Constants.Images.bharath_qr_logo)
-                        .resizable()
-                    Text(Constants.Texts.scan_pay)
-                        .font(.system(size: fontSize))
-                        .fontWeight(.bold)
-                        .foregroundColor(Color.fontColor)
-                        .frame(width: buttonTextWidth)
-                }
-            }
+        CustomButton(btnTitle: Constants.Texts.scan_pay, btnImage: Constants.Images.bharath_qr_logo) {
+            print("Scan to Pay button tapped")
         }
-        .frame(width: buttonWidth,
-               height: buttonHeight,
-               alignment: .center)
     }
     
     var btnOffers: some View {
-        VStack {
-            Button {
-                print("Offers near you button tapped")
-            } label: {
-                VStack {
-                    Image(Constants.Images.offers_near_me)
-                        .resizable()
-                    Text(Constants.Texts.offer_near_you)
-                        .font(.system(size: fontSize))
-                        .fontWeight(.bold)
-                        .foregroundColor(Color.fontColor)
-                        .frame(width: buttonTextWidth)
-                }
+        CustomButton(btnTitle: Constants.Texts.offer_near_you, btnImage: Constants.Images.offers_near_me) {
+            print("Offers near you button tapped")
+        }
+    }
+}
+
+struct CustomButton: View {
+    var btnTitle: String
+    var btnImage: String
+    var btnAction: () -> Void
+    
+    var body: some View {
+        Button(action: btnAction) {
+            VStack {
+                Image(btnImage)
+                    .resizable()
+                    .frame(height: 50,
+                           alignment: .top)
+                Text(btnTitle)
+                    .font(.system(size: 11))
+                    .fontWeight(.bold)
+                    .foregroundColor(Color.blueFontColor)
+                    .frame(width: 100)
             }
         }
-        .frame(width: buttonWidth,
-               height: buttonHeight,
+        .frame(width: Constants.Dimensions.mpin_field_width,
+               height: Constants.Dimensions.mpin_field_height,
                alignment: .center)
     }
 }

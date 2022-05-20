@@ -31,13 +31,25 @@ struct MPINTextField: View {
             Spacer()
         }
         .background(.white)
-        .padding()
     }
     
     var secureField: some View {
         SecureField("", text: $password)
             .padding()
             .background(.white)
+    }
+    
+    var goBtn2: some View {
+        Button(action: {
+            print("Enter Pin action")
+        }, label: {
+            Image(systemName: "chevron.right")
+        })
+        .font(.system(size: 24))
+        .foregroundColor(.black)
+        .frame(minWidth: 28, maxHeight: Constants.Dimensions.mpin_field_height)
+        .padding()
+        .background(Color.yellow)
     }
     
     var goBtn: some View {
@@ -50,8 +62,13 @@ struct MPINTextField: View {
         .padding()
         .foregroundColor(.black)
         .background(Color.mpinSubmitBGColor)
-        .frame(width: fieldWidth - 10,
-               height: fieldHeight,
+//        .frame(width: fieldWidth - 10,
+//               height: fieldHeight,
+//               alignment: .center)
+        .frame(minWidth: 0,
+               maxWidth: .infinity,
+               minHeight: 0,
+               maxHeight: fieldHeight,
                alignment: .center)
     }
     

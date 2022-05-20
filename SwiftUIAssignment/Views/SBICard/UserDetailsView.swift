@@ -35,7 +35,7 @@ struct UserDetailsView: View {
         Picker("", selection: $defaultSelection) {
             Text(Constants.Texts.password).tag(0)
                 .font(.subheadline)
-                .foregroundColor(Color.fontColor)
+                .foregroundColor(Color.blueFontColor)
             Text(Constants.Texts.mpin).tag(1)
             Text("")
         }
@@ -45,21 +45,17 @@ struct UserDetailsView: View {
     
     var forgotView: some View {
         HStack {
-            Button {
+            Button(Constants.Texts.unlock_user) {
                 print("Unlock User")
-            } label: {
-                Text(Constants.Texts.unlock_user)
-                    .foregroundColor(Color.fontColor)
             }
+            .buttonStyle(BlueButton())
             
             Spacer()
             
-            Button {
+            Button(Constants.Texts.forgot_login_det) {
                 print("Forgot Login Details")
-            } label: {
-                Text(Constants.Texts.forgot_login_det)
-                    .foregroundColor(Color.fontColor)
             }
+            .buttonStyle(BlueButton())
         }
     }
 }

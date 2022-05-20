@@ -17,7 +17,8 @@
 		A075388F2834D45C008FFF3A /* MPINTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = A075388E2834D45C008FFF3A /* MPINTextField.swift */; };
 		A07538942834D5EA008FFF3A /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = A07538932834D5EA008FFF3A /* Color.swift */; };
 		A0E5CEFB2834F66100A0F723 /* QuickAccessView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0E5CEFA2834F66100A0F723 /* QuickAccessView.swift */; };
-		A0E5CEFD28350A3700A0F723 /* QuickAccessButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0E5CEFC28350A3700A0F723 /* QuickAccessButton.swift */; };
+		A0E5CEFD28350A3700A0F723 /* YellowButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0E5CEFC28350A3700A0F723 /* YellowButton.swift */; };
+		A0E5CEFF2837574200A0F723 /* BlueButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0E5CEFE2837574200A0F723 /* BlueButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,7 +33,8 @@
 		A075388E2834D45C008FFF3A /* MPINTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MPINTextField.swift; sourceTree = "<group>"; };
 		A07538932834D5EA008FFF3A /* Color.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 		A0E5CEFA2834F66100A0F723 /* QuickAccessView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuickAccessView.swift; sourceTree = "<group>"; };
-		A0E5CEFC28350A3700A0F723 /* QuickAccessButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuickAccessButton.swift; sourceTree = "<group>"; };
+		A0E5CEFC28350A3700A0F723 /* YellowButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YellowButton.swift; sourceTree = "<group>"; };
+		A0E5CEFE2837574200A0F723 /* BlueButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlueButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,7 +101,8 @@
 				A075388C2834D046008FFF3A /* UserDetailsView.swift */,
 				A075388E2834D45C008FFF3A /* MPINTextField.swift */,
 				A0E5CEFA2834F66100A0F723 /* QuickAccessView.swift */,
-				A0E5CEFC28350A3700A0F723 /* QuickAccessButton.swift */,
+				A0E5CEFC28350A3700A0F723 /* YellowButton.swift */,
+				A0E5CEFE2837574200A0F723 /* BlueButton.swift */,
 			);
 			path = SBICard;
 			sourceTree = "<group>";
@@ -183,12 +186,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				A0147DC22834CC28002E8C70 /* SBICardLoginView.swift in Sources */,
+				A0E5CEFF2837574200A0F723 /* BlueButton.swift in Sources */,
 				A0147DB32834C716002E8C70 /* ContentView.swift in Sources */,
 				A0E5CEFB2834F66100A0F723 /* QuickAccessView.swift in Sources */,
 				A07538942834D5EA008FFF3A /* Color.swift in Sources */,
 				A0147DB12834C716002E8C70 /* SwiftUIAssignmentApp.swift in Sources */,
 				A075388D2834D046008FFF3A /* UserDetailsView.swift in Sources */,
-				A0E5CEFD28350A3700A0F723 /* QuickAccessButton.swift in Sources */,
+				A0E5CEFD28350A3700A0F723 /* YellowButton.swift in Sources */,
 				A07538882834CE75008FFF3A /* Constants.swift in Sources */,
 				A075388F2834D45C008FFF3A /* MPINTextField.swift in Sources */,
 			);

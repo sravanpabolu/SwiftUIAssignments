@@ -31,7 +31,8 @@ struct Constants {
     }
     
     struct Dimensions {
-        static let mpin_field_width = 50.0
-        static let mpin_field_height = 50.0
+        static let get_in_touch_btn_height  = 30.0
+        static let mpin_field_width         = 50.0
+        static let mpin_field_height        = 50.0
     }
 }
