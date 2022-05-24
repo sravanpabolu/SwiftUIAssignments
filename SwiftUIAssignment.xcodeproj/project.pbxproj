@@ -13,6 +13,10 @@
 		A0147DB82834C718002E8C70 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A0147DB72834C718002E8C70 /* Preview Assets.xcassets */; };
 		A0147DC22834CC28002E8C70 /* SBICardLoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0147DC12834CC28002E8C70 /* SBICardLoginView.swift */; };
 		A055AC54283CC54300224CA7 /* SBICard.png in Resources */ = {isa = PBXBuildFile; fileRef = A055AC53283CC54300224CA7 /* SBICard.png */; };
+		A055AC58283CCD4A00224CA7 /* Errors.swift in Sources */ = {isa = PBXBuildFile; fileRef = A055AC57283CCD4A00224CA7 /* Errors.swift */; };
+		A055AC5D283CCDFA00224CA7 /* NetworkClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = A055AC5C283CCDFA00224CA7 /* NetworkClient.swift */; };
+		A055AC5F283CCF8A00224CA7 /* Enums.swift in Sources */ = {isa = PBXBuildFile; fileRef = A055AC5E283CCF8A00224CA7 /* Enums.swift */; };
+		A055AC62283CEBAF00224CA7 /* Album.swift in Sources */ = {isa = PBXBuildFile; fileRef = A055AC61283CEBAF00224CA7 /* Album.swift */; };
 		A07538882834CE75008FFF3A /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = A07538872834CE75008FFF3A /* Constants.swift */; };
 		A075388D2834D046008FFF3A /* UserDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A075388C2834D046008FFF3A /* UserDetailsView.swift */; };
 		A075388F2834D45C008FFF3A /* MPINTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = A075388E2834D45C008FFF3A /* MPINTextField.swift */; };
@@ -32,6 +36,10 @@
 		A0147DB72834C718002E8C70 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		A0147DC12834CC28002E8C70 /* SBICardLoginView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SBICardLoginView.swift; sourceTree = "<group>"; };
 		A055AC53283CC54300224CA7 /* SBICard.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SBICard.png; sourceTree = "<group>"; };
+		A055AC57283CCD4A00224CA7 /* Errors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Errors.swift; sourceTree = "<group>"; };
+		A055AC5C283CCDFA00224CA7 /* NetworkClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkClient.swift; sourceTree = "<group>"; };
+		A055AC5E283CCF8A00224CA7 /* Enums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Enums.swift; sourceTree = "<group>"; };
+		A055AC61283CEBAF00224CA7 /* Album.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Album.swift; sourceTree = "<group>"; };
 		A07538872834CE75008FFF3A /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Constants.swift; path = SwiftUIAssignment/Constants.swift; sourceTree = SOURCE_ROOT; };
 		A075388C2834D046008FFF3A /* UserDetailsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDetailsView.swift; sourceTree = "<group>"; };
 		A075388E2834D45C008FFF3A /* MPINTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MPINTextField.swift; sourceTree = "<group>"; };
@@ -76,6 +84,8 @@
 				A0147DB02834C716002E8C70 /* SwiftUIAssignmentApp.swift */,
 				A0147DB22834C716002E8C70 /* ContentView.swift */,
 				A07538872834CE75008FFF3A /* Constants.swift */,
+				A055AC5B283CCDE200224CA7 /* Reusable */,
+				A055AC56283CCD2200224CA7 /* Enums */,
 				A07538922834D5EA008FFF3A /* Extensions */,
 				A0147DC02834CC28002E8C70 /* Views */,
 				A0147DB42834C718002E8C70 /* Assets.xcassets */,
@@ -95,6 +105,7 @@
 		A0147DC02834CC28002E8C70 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				A055AC55283CCCD200224CA7 /* TopSongs */,
 				A075388B2834D046008FFF3A /* SBICard */,
 			);
 			path = Views;
@@ -119,6 +130,55 @@
 				A055AC53283CC54300224CA7 /* SBICard.png */,
 			);
 			path = TargetDesign;
+			sourceTree = "<group>";
+		};
+		A055AC55283CCCD200224CA7 /* TopSongs */ = {
+			isa = PBXGroup;
+			children = (
+				A055AC5A283CCDD400224CA7 /* Classes */,
+				A055AC59283CCDC700224CA7 /* TargetDesign */,
+			);
+			path = TopSongs;
+			sourceTree = "<group>";
+		};
+		A055AC56283CCD2200224CA7 /* Enums */ = {
+			isa = PBXGroup;
+			children = (
+				A055AC57283CCD4A00224CA7 /* Errors.swift */,
+				A055AC5E283CCF8A00224CA7 /* Enums.swift */,
+			);
+			path = Enums;
+			sourceTree = "<group>";
+		};
+		A055AC59283CCDC700224CA7 /* TargetDesign */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = TargetDesign;
+			sourceTree = "<group>";
+		};
+		A055AC5A283CCDD400224CA7 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				A055AC60283CEA0C00224CA7 /* Models */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		A055AC5B283CCDE200224CA7 /* Reusable */ = {
+			isa = PBXGroup;
+			children = (
+				A055AC5C283CCDFA00224CA7 /* NetworkClient.swift */,
+			);
+			path = Reusable;
+			sourceTree = "<group>";
+		};
+		A055AC60283CEA0C00224CA7 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				A055AC61283CEBAF00224CA7 /* Album.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 		A075388B2834D046008FFF3A /* SBICard */ = {
@@ -226,9 +286,13 @@
 				A07538942834D5EA008FFF3A /* Color.swift in Sources */,
 				A0E5CF012837751300A0F723 /* YellowViews.swift in Sources */,
 				A0147DB12834C716002E8C70 /* SwiftUIAssignmentApp.swift in Sources */,
+				A055AC62283CEBAF00224CA7 /* Album.swift in Sources */,
+				A055AC5F283CCF8A00224CA7 /* Enums.swift in Sources */,
+				A055AC58283CCD4A00224CA7 /* Errors.swift in Sources */,
 				A0E5CF042837BEDC00A0F723 /* ImageButton.swift in Sources */,
 				A075388D2834D046008FFF3A /* UserDetailsView.swift in Sources */,
 				A0E5CEFD28350A3700A0F723 /* YellowButton.swift in Sources */,
+				A055AC5D283CCDFA00224CA7 /* NetworkClient.swift in Sources */,
 				A07538882834CE75008FFF3A /* Constants.swift in Sources */,
 				A075388F2834D45C008FFF3A /* MPINTextField.swift in Sources */,
 			);
