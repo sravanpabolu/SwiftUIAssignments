@@ -37,13 +37,13 @@ struct Link: Codable {
 
 struct Result: Codable {
     let artistName, id, name, releaseDate: String
-    let kind: Kind
+    let kind: String?
     let artistID: String?
     let artistURL: String?
     let artworkUrl100: String
     let genres: [Genre]
     let url: String
-    let contentAdvisoryRating: ContentAdvisoryRating?
+    let contentAdvisoryRating: String?
 
     enum CodingKeys: String, CodingKey {
         case artistName, id, name, releaseDate, kind
@@ -51,10 +51,6 @@ struct Result: Codable {
         case artistURL = "artistUrl"
         case artworkUrl100, genres, url, contentAdvisoryRating
     }
-}
-
-enum ContentAdvisoryRating: String, Codable {
-    case explict = "Explict"
 }
 
 struct Genre: Codable {
@@ -67,6 +63,3 @@ struct Genre: Codable {
     }
 }
 
-enum Kind: String, Codable {
-    case albums = "albums"
-}
