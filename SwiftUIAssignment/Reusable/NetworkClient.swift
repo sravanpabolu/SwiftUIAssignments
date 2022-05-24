@@ -9,11 +9,11 @@ import Foundation
 import Combine
 
 protocol NetworkService {
-    func getData<T: Codable>(for endpoint: EndPoint, type: T) throws -> AnyPublisher<T, Error>
+    func getData<T: Codable>(for endpoint: EndPoint, type: T.Type) throws -> AnyPublisher<T, Error>
 }
 
-class APIClient: NetworkService {
-    func getData<T: Codable>(for endpoint: EndPoint, type: T) throws -> AnyPublisher<T, Error> {
+class NetworkClient: NetworkService {
+    func getData<T: Codable>(for endpoint: EndPoint, type: T.Type) throws -> AnyPublisher<T, Error> {
         
         guard let url = URL(string: endpoint.getUrl()) else {
             throw NetworkError.url
