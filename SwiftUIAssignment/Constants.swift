@@ -36,3 +36,9 @@ struct Constants {
         static let mpin_field_height        = 50.0
     }
 }
+
+extension Constants {
+    struct URLConstants {
+        static let url_top_songs = "https://rss.applemarketingtools.com/api/v2/in/music/most-played/50/albums.json"
+    }
+}
