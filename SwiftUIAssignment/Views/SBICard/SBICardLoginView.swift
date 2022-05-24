@@ -14,11 +14,7 @@ struct SBICardLoginView: View {
         VStack(spacing: 0) {
             sbiLogoView
             userDetailsView
-            quickAccessView
-            btnGetInTouch
-            Divider()
-                .background(.gray)
-            btnExplore
+            YellowViews()
             versionView
         }
     }
@@ -30,25 +26,6 @@ struct SBICardLoginView: View {
     var userDetailsView: some View {
         UserDetailsView()
             .padding()
-    }
-    
-    var quickAccessView: some View {
-        QuickAccessView()
-//            .padding()
-    }
-    
-    var btnGetInTouch: some View {
-        Button (Constants.Texts.get_in_touch) {
-            print("Get in touch Button Tapped")
-        }
-        .buttonStyle(YellowButton())
-    }
-    
-    var btnExplore: some View {
-        Button(Constants.Texts.explore) {
-            print("Explore Button Tapped")
-        }
-        .buttonStyle(YellowButton())
     }
     
     var versionView: some View {

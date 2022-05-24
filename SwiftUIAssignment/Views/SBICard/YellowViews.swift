@@ -9,7 +9,29 @@ import SwiftUI
 
 struct YellowViews: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack {
+            quickAccessView
+            btnGetInTouch
+            btnExplore
+        }
+    }
+    
+    var quickAccessView: some View {
+        QuickAccessView()
+    }
+    
+    var btnGetInTouch: some View {
+        Button (Constants.Texts.get_in_touch) {
+            print("Get in touch Button Tapped")
+        }
+        .buttonStyle(YellowButton())
+    }
+    
+    var btnExplore: some View {
+        Button(Constants.Texts.explore) {
+            print("Explore Button Tapped")
+        }
+        .buttonStyle(YellowButton())
     }
 }
 
