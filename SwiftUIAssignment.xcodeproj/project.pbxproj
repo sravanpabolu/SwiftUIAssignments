@@ -103,7 +103,6 @@
 		A055AC51283CC4C700224CA7 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				A055AC52283CC4D900224CA7 /* TargetDesign */,
 				A0E5CF022837BEBA00A0F723 /* Reusable */,
 				A0147DC12834CC28002E8C70 /* SBICardLoginView.swift */,
 				A075388C2834D046008FFF3A /* UserDetailsView.swift */,
@@ -125,6 +124,7 @@
 		A075388B2834D046008FFF3A /* SBICard */ = {
 			isa = PBXGroup;
 			children = (
+				A055AC52283CC4D900224CA7 /* TargetDesign */,
 				A055AC51283CC4C700224CA7 /* Classes */,
 			);
 			path = SBICard;
