@@ -16,12 +16,13 @@
 		A055AC5D283CCDFA00224CA7 /* NetworkClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = A055AC5C283CCDFA00224CA7 /* NetworkClient.swift */; };
 		A055AC5F283CCF8A00224CA7 /* Enums.swift in Sources */ = {isa = PBXBuildFile; fileRef = A055AC5E283CCF8A00224CA7 /* Enums.swift */; };
 		A055AC62283CEBAF00224CA7 /* Album.swift in Sources */ = {isa = PBXBuildFile; fileRef = A055AC61283CEBAF00224CA7 /* Album.swift */; };
-		A055AC65283CEC2E00224CA7 /* AlbumsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A055AC64283CEC2E00224CA7 /* AlbumsViewModel.swift */; };
+		A055AC65283CEC2E00224CA7 /* AlbumListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A055AC64283CEC2E00224CA7 /* AlbumListViewModel.swift */; };
 		A07538882834CE75008FFF3A /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = A07538872834CE75008FFF3A /* Constants.swift */; };
 		A075388D2834D046008FFF3A /* UserDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A075388C2834D046008FFF3A /* UserDetailsView.swift */; };
 		A075388F2834D45C008FFF3A /* MPINTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = A075388E2834D45C008FFF3A /* MPINTextField.swift */; };
 		A07538942834D5EA008FFF3A /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = A07538932834D5EA008FFF3A /* Color.swift */; };
 		A0D911A4283D074E007CB335 /* TopSongsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0D911A3283D074E007CB335 /* TopSongsView.swift */; };
+		A0D911A6283E2D55007CB335 /* AlbumViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0D911A5283E2D55007CB335 /* AlbumViewModel.swift */; };
 		A0E5CEFB2834F66100A0F723 /* QuickAccessView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0E5CEFA2834F66100A0F723 /* QuickAccessView.swift */; };
 		A0E5CEFD28350A3700A0F723 /* YellowButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0E5CEFC28350A3700A0F723 /* YellowButton.swift */; };
 		A0E5CEFF2837574200A0F723 /* BlueButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0E5CEFE2837574200A0F723 /* BlueButton.swift */; };
@@ -40,12 +41,13 @@
 		A055AC5C283CCDFA00224CA7 /* NetworkClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkClient.swift; sourceTree = "<group>"; };
 		A055AC5E283CCF8A00224CA7 /* Enums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Enums.swift; sourceTree = "<group>"; };
 		A055AC61283CEBAF00224CA7 /* Album.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Album.swift; sourceTree = "<group>"; };
-		A055AC64283CEC2E00224CA7 /* AlbumsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumsViewModel.swift; sourceTree = "<group>"; };
+		A055AC64283CEC2E00224CA7 /* AlbumListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumListViewModel.swift; sourceTree = "<group>"; };
 		A07538872834CE75008FFF3A /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Constants.swift; path = SwiftUIAssignment/Constants.swift; sourceTree = SOURCE_ROOT; };
 		A075388C2834D046008FFF3A /* UserDetailsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDetailsView.swift; sourceTree = "<group>"; };
 		A075388E2834D45C008FFF3A /* MPINTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MPINTextField.swift; sourceTree = "<group>"; };
 		A07538932834D5EA008FFF3A /* Color.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 		A0D911A3283D074E007CB335 /* TopSongsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TopSongsView.swift; sourceTree = "<group>"; };
+		A0D911A5283E2D55007CB335 /* AlbumViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumViewModel.swift; sourceTree = "<group>"; };
 		A0E5CEFA2834F66100A0F723 /* QuickAccessView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuickAccessView.swift; sourceTree = "<group>"; };
 		A0E5CEFC28350A3700A0F723 /* YellowButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YellowButton.swift; sourceTree = "<group>"; };
 		A0E5CEFE2837574200A0F723 /* BlueButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlueButton.swift; sourceTree = "<group>"; };
@@ -187,7 +189,8 @@
 		A055AC63283CEC2000224CA7 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
-				A055AC64283CEC2E00224CA7 /* AlbumsViewModel.swift */,
+				A055AC64283CEC2E00224CA7 /* AlbumListViewModel.swift */,
+				A0D911A5283E2D55007CB335 /* AlbumViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -298,6 +301,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A0D911A6283E2D55007CB335 /* AlbumViewModel.swift in Sources */,
 				A0147DC22834CC28002E8C70 /* SBICardLoginView.swift in Sources */,
 				A0D911A4283D074E007CB335 /* TopSongsView.swift in Sources */,
 				A0E5CEFF2837574200A0F723 /* BlueButton.swift in Sources */,
@@ -308,7 +312,7 @@
 				A0147DB12834C716002E8C70 /* SwiftUIAssignmentApp.swift in Sources */,
 				A055AC62283CEBAF00224CA7 /* Album.swift in Sources */,
 				A055AC5F283CCF8A00224CA7 /* Enums.swift in Sources */,
-				A055AC65283CEC2E00224CA7 /* AlbumsViewModel.swift in Sources */,
+				A055AC65283CEC2E00224CA7 /* AlbumListViewModel.swift in Sources */,
 				A0E5CF042837BEDC00A0F723 /* ImageButton.swift in Sources */,
 				A075388D2834D046008FFF3A /* UserDetailsView.swift in Sources */,
 				A0E5CEFD28350A3700A0F723 /* YellowButton.swift in Sources */,

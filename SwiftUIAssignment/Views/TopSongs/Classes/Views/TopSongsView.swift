@@ -8,20 +8,52 @@
 import SwiftUI
 
 struct TopSongsView: View {
-    let viewModel = AlbumsViewModel(client: NetworkClient())
+    @ObservedObject var viewModel = AlbumListViewModel(client: NetworkClient())
     
     var body: some View {
-        VStack {
-            Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        ZStack {
+            if viewModel.isLoading {
+                ProgressView()
+            } else {
+                NavigationView {
+                    albumList
+                        .refreshable(action: {
+                            getAlbums()
+                        })
+                        .navigationTitle("Stocks")
+                }
+            }
         }
         .onAppear {
-            viewModel.getAlbums()
+            getAlbums()
         }
+        .alert(isPresented: $viewModel.hasError) {
+            Alert(title: Text("Alert"), message: Text(viewModel.networkError?.errorDescription() ?? "Some unknown error"), dismissButton: .cancel())
+        }
+//        .alert(item: $viewModel.networkError) { alertItem in
+//            Alert(title: "Alert", message: alertItem.message, dismissButton: alertItem.dismissButton)
+//        }
+    }
+    
+    var albumList: some View {
+        return List(viewModel.album.songs, id: \.id) { album in
+            Text(album.name)
+        }
+    }
+    
+    var errorView: some View {
+        Text("Oops. Unable to get albums")
+            .font(.headline)
+    }
+    
+    func getAlbums() {
+        viewModel.getAlbums()
     }
 }
 
 struct TopSongsView_Previews: PreviewProvider {
     static var previews: some View {
         TopSongsView()
+//            .environment(\.colorScheme, .dark)
     }
 }
