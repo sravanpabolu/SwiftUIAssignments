@@ -12,15 +12,13 @@ struct TopSongsView: View {
     
     var body: some View {
         ZStack {
+            Color.albumRowBGColor
+                .ignoresSafeArea()
             if viewModel.isLoading {
-                ProgressView()
+                progressView
             } else {
                 NavigationView {
                     albumList
-                        .refreshable(action: {
-                            getAlbums()
-                        })
-                        .navigationTitle("Stocks")
                 }
             }
         }
@@ -30,15 +28,30 @@ struct TopSongsView: View {
         .alert(isPresented: $viewModel.hasError) {
             Alert(title: Text("Alert"), message: Text(viewModel.networkError?.errorDescription() ?? "Some unknown error"), dismissButton: .cancel())
         }
-//        .alert(item: $viewModel.networkError) { alertItem in
-//            Alert(title: "Alert", message: alertItem.message, dismissButton: alertItem.dismissButton)
-//        }
+    }
+    
+    var progressView: some View {
+        ProgressView() {
+            Text("Loading...")
+                .font(.caption2)
+                .foregroundColor(.white)
+        }
+        .progressViewStyle(.circular)
+        .tint(.white)
+        .scaleEffect(x: 3, y: 3, anchor: .center)
     }
     
     var albumList: some View {
-        return List(viewModel.album.songs, id: \.id) { album in
-            Text(album.name)
+        List {
+            ForEach(Array(zip(viewModel.album.songs.indices, viewModel.album.songs)), id: \.0) { index, album in
+                AlbumRowItemView(index: index, album: album)
+            }
+            .listRowBackground(Color.albumRowBGColor)
         }
+        .refreshable(action: {
+            getAlbums()
+        })
+        .navigationTitle("Top 50 Songs")
     }
     
     var errorView: some View {

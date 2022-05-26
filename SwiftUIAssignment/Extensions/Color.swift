@@ -25,3 +25,17 @@ extension Color {
         Color(red: 240/255, green: 190/255, blue: 50/255)
     }
 }
+
+extension Color {
+    static var btnPlayBGColor: Color {
+        Color(red: 30/255, green: 35/255, blue: 40/255)
+    }
+    
+    static var albumRowBGColor: Color {
+        Color(red: 40/255, green: 45/255, blue: 50/255)
+    }
+    
+    static var albumTextColor: Color {
+        Color(red: 200/255, green: 205/255, blue: 210/255)
+    }
+}
