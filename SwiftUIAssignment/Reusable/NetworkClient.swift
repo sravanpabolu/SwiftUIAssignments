@@ -8,25 +8,25 @@
 import Foundation
 import Combine
 
-protocol NetworkService {
+protocol DataFetchService {
     func getData<T: Codable>(for endpoint: EndPoint, type: T.Type) throws -> AnyPublisher<T, Error>
 }
 
-class NetworkClient: NetworkService {
+class NetworkClient: DataFetchService {
     func getData<T: Codable>(for endpoint: EndPoint, type: T.Type) throws -> AnyPublisher<T, Error> {
         
-        guard let url = URL(string: endpoint.getUrl()) else {
-            throw NetworkError.url
+        guard let url = endpoint.getUrl() else {
+            throw DataFetchError.url
         }
         
         let dataPublisher = URLSession.shared.dataTaskPublisher(for: url)
             .mapError { error in
-                NetworkError.custom(description: error.localizedDescription)
+                DataFetchError.custom(description: error.localizedDescription)
             }
             .tryMap { output in
                 guard let response = output.response as? HTTPURLResponse,
                       200...299 ~= response.statusCode else {
-                    throw NetworkError.response
+                    throw DataFetchError.response
                 }
                 
                 return output.data

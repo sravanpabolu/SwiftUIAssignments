@@ -12,7 +12,7 @@ class AlbumListViewModel: ObservableObject {
     
     private let client: NetworkClient
     private var cancellable = Set<AnyCancellable>()
-    private(set) var networkError: NetworkError?
+    private(set) var networkError: DataFetchError?
     
     @Published var isLoading = false
     @Published var hasError = false
@@ -31,7 +31,7 @@ class AlbumListViewModel: ObservableObject {
                     switch completion {
                     case .failure(let error):
                         self?.hasError = true
-                        self?.networkError = NetworkError.custom(description: error.localizedDescription)
+                        self?.networkError = DataFetchError.custom(description: error.localizedDescription)
                     case .finished:
                         print("Finished")
                     }
@@ -40,14 +40,14 @@ class AlbumListViewModel: ObservableObject {
                     self?.album = AlbumViewModel.init(album: albumData)
                 })
                 .store(in: &cancellable)
-        } catch let error as NetworkError {
+        } catch let error as DataFetchError {
             isLoading = false
             hasError = true
-            networkError = NetworkError.custom(description: error.localizedDescription)
+            networkError = DataFetchError.custom(description: error.localizedDescription)
         } catch {
             isLoading = false
             hasError = true
-            networkError = NetworkError.custom(description: error.localizedDescription)
+            networkError = DataFetchError.custom(description: error.localizedDescription)
         }
     }
 }

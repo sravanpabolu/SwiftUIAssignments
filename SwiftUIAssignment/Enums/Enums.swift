@@ -9,13 +9,19 @@ import Foundation
 
 enum EndPoint {
     case topSongs
+    case chaseBankStatement
     
-    func getUrl() -> String {
-        return Constants.URLConstants.url_top_songs
+    func getUrl() -> URL? {
+        switch self {
+        case .topSongs:
+            return URL(string: Constants.URLConstants.url_top_songs)
+        case .chaseBankStatement:
+            return Bundle.main.url(forResource: "ChaseBankStatementResponse", withExtension: "json")
+        }
     }
 }
 
-enum NetworkError: Error {
+enum DataFetchError: Error {
     case url, response, parsing
     case custom(description: String)
     
