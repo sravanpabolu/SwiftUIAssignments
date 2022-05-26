@@ -1,0 +1,58 @@
+{
+    "transactions": [
+        {
+            "description": "Target",
+            "amount": "49.03",
+            "status": "debit",
+            "transaction_date": "19/Sep/2022"
+        },
+        {
+            "description": "Whole Foods Market",
+            "amount": "217.34",
+            "status": "debit",
+            "transaction_date": "19/Sep/2022"
+        },
+        {
+            "description": "Online Transfer(...3896)",
+            "amount": "1900.00",
+            "status": "credit",
+            "transaction_date": "19/Sep/2022"
+        },
+        {
+            "description": "Pure Austin Fitness",
+            "amount": "25.00",
+            "status": "debit",
+            "transaction_date": "19/Sep/2022"
+        },
+        {
+            "description": "Online Transfer(...3896)",
+            "amount": "45.00",
+            "status": "credit",
+            "transaction_date": "19/Sep/2022"
+        },
+        {
+            "description": "Chase EPAY",
+            "amount": "690.00",
+            "status": "debit",
+            "transaction_date": "18/Sep/2022"
+        },
+        {
+            "description": "Top Golf Austin",
+            "amount": "129.00",
+            "status": "debit",
+            "transaction_date": "18/Sep/2022"
+        },
+        {
+            "description": "Online Transfer(...3896)",
+            "amount": "200.00",
+            "status": "credit",
+            "transaction_date": "18/Sep/2022"
+        },
+        {
+            "description": "Easy Tiger",
+            "amount": "29.23",
+            "status": "debit",
+            "transaction_date": "18/Sep/2022"
+        }
+    ]
+}
