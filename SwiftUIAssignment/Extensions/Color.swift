@@ -8,6 +8,7 @@
 import Foundation
 import SwiftUI
 
+//MARK: - SBICard
 extension Color {
     static var userDetailsAreaBGColor: Color {
         Color(red: 219/255, green: 243/255, blue: 253/255)
@@ -26,6 +27,7 @@ extension Color {
     }
 }
 
+//MARK: - TopSongs
 extension Color {
     static var btnPlayBGColor: Color {
         Color(red: 30/255, green: 35/255, blue: 40/255)
@@ -37,5 +39,16 @@ extension Color {
     
     static var albumTextColor: Color {
         Color(red: 200/255, green: 205/255, blue: 210/255)
+    }
+}
+
+//MARK: - Chase Bank Statement
+extension Color {
+    static var chaseBlackShade: Color {
+        Color(red: 33/255, green: 30/255, blue: 30/255)
+    }
+    
+    static var chaseLightShade: Color {
+        Color(red: 17/255, green: 122/255, blue: 202/255)
     }
 }
