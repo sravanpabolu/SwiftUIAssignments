@@ -37,7 +37,7 @@ struct TopSongsView: View {
     
     var resultsView: some View {
         ZStack {
-            Color.albumBGColor
+            LinearGradient(gradient: Gradient(colors: [.albumBGGradient1, .albumBGGradient2]), startPoint: .top, endPoint: .bottom)
                 .ignoresSafeArea()
             
             if let albums = viewModel.album {
@@ -55,14 +55,18 @@ struct TopSongsView: View {
     }
     
     var progressView: some View {
-        ProgressView() {
-            Text("Loading...")
-                .font(.caption2)
-                .foregroundColor(.white)
+        ZStack {
+            Color.albumBGColor
+                .ignoresSafeArea()
+            ProgressView() {
+                Text("Loading...")
+                    .font(.caption2)
+                    .foregroundColor(.white)
+            }
+            .progressViewStyle(.circular)
+            .tint(.white)
+            .scaleEffect(x: 3, y: 3, anchor: .center)
         }
-        .progressViewStyle(.circular)
-        .tint(.white)
-        .scaleEffect(x: 3, y: 3, anchor: .center)
     }
     
     var errorView: some View {
@@ -83,17 +87,16 @@ struct AlbumsListView: View {
             ForEach(Array(zip(songs.indices, songs)), id: \.0) { index, album in
                 AlbumRowItemView(index: index, album: album)
             }
-            .listRowBackground(Color.albumRowBGColor)
+            .listRowBackground(Color.clear)
         }
         .onAppear(perform: {
-            UITableView.appearance().backgroundColor = UIColor(Color.albumRowBGColor)
+            UITableView.appearance().backgroundColor = UIColor(Color.clear)
         })
         .onDisappear(perform: {
-            UITableView.appearance().backgroundColor = UIColor(Color.albumRowBGColor)
+            UITableView.appearance().backgroundColor = UIColor(Color.clear)
         })
         .navigationTitle("Top 50 Songs")
         .padding(.vertical)
-
     }
 }
 

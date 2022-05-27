@@ -22,10 +22,9 @@ struct AlbumRowItemView: View {
         ZStack {
             RoundedRectangle(cornerRadius: 25,
                              style: .continuous)
-            .fill(Color.albumRowBGColor)
-            .frame(maxHeight: 100)
+            .fill(Color.clear)
             
-            HStack {
+            HStack(spacing: 15) {
                 ZStack {
                     Circle()
                         .fill(Color.btnPlayBGColor)
@@ -36,11 +35,11 @@ struct AlbumRowItemView: View {
                         .foregroundColor(Color.albumTextColor)
                         
                 }
-                .padding(.horizontal)
                 
                 Group {
                     AlbumImageView(urlString: album.artworkUrl100)
                     Text("\(album.name)")
+                        .lineLimit(2)
                         .font(.title3)
                         .foregroundColor(Color.albumTextColor)
                 }

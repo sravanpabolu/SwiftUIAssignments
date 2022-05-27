@@ -33,16 +33,20 @@ extension Color {
         Color(red: 30/255, green: 35/255, blue: 40/255)
     }
     
-    static var albumRowBGColor: Color {
-        Color(red: 40/255, green: 45/255, blue: 50/255)
-    }
-    
     static var albumTextColor: Color {
         Color(red: 200/255, green: 205/255, blue: 210/255)
     }
     
     static var albumBGColor: Color {
         Color(red: 58/255, green: 63/255, blue: 69/255)
+    }
+    
+    static var albumBGGradient1: Color {
+        Color(red: 50/255, green: 55/255, blue: 60/255)
+    }
+    
+    static var albumBGGradient2: Color {
+        Color(red: 20/255, green: 25/255, blue: 30/255)
     }
 }
 
