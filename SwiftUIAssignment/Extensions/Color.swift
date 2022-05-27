@@ -59,4 +59,8 @@ extension Color {
     static var chaseLightShade: Color {
         Color(red: 17/255, green: 122/255, blue: 202/255)
     }
+    
+    static var chaseNavigationBarShade: Color {
+        Color(red: 7/255, green: 43/255, blue: 80/255)
+    }
 }

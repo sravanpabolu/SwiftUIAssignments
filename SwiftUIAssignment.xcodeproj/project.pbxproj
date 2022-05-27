@@ -69,6 +69,7 @@
 		A075388C2834D046008FFF3A /* UserDetailsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDetailsView.swift; sourceTree = "<group>"; };
 		A075388E2834D45C008FFF3A /* MPINTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MPINTextField.swift; sourceTree = "<group>"; };
 		A07538932834D5EA008FFF3A /* Color.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
+		A07606D52841391E003518C6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		A0D911A3283D074E007CB335 /* TopSongsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TopSongsView.swift; sourceTree = "<group>"; };
 		A0D911A5283E2D55007CB335 /* AlbumViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumViewModel.swift; sourceTree = "<group>"; };
 		A0D911A7283E2F02007CB335 /* AlbumImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumImageView.swift; sourceTree = "<group>"; };
@@ -109,6 +110,7 @@
 		A0147DAF2834C716002E8C70 /* SwiftUIAssignment */ = {
 			isa = PBXGroup;
 			children = (
+				A07606D52841391E003518C6 /* Info.plist */,
 				A0724193283FB7FF00E0784C /* Misc */,
 				A0147DB02834C716002E8C70 /* SwiftUIAssignmentApp.swift */,
 				A0147DB22834C716002E8C70 /* ContentView.swift */,
@@ -529,6 +531,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"SwiftUIAssignment/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = SwiftUIAssignment/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -557,6 +560,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"SwiftUIAssignment/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = SwiftUIAssignment/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

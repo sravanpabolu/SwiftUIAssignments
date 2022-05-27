@@ -12,7 +12,7 @@ struct TransactionsListView: View {
     
     var body: some View {
         ZStack {
-            Color.chaseBlackShade
+            Color.chaseNavigationBarShade
                 .ignoresSafeArea()
             VStack {
                 logoView

@@ -13,8 +13,8 @@ struct SwiftUIAssignmentApp: App {
         WindowGroup {
 //            ContentView()
 //            SBICardLoginView()
-            TopSongsView()
-//            TransactionsListView()
+//            TopSongsView()
+            TransactionsListView()
         }
     }
 }
