@@ -48,6 +48,7 @@ struct AlbumRowItemView: View {
             Circle()
                 .fill(Color.btnPlayBGColor)
                 .frame(maxWidth: playBtnDimensions, alignment: .center)
+                .shadow(color: Color.albumBGColor, radius: 10)
             Button {
                 print("Button Play Tapped")
             } label: {

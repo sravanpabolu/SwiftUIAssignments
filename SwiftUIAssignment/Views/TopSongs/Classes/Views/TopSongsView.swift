@@ -10,16 +10,21 @@ import SwiftUI
 struct TopSongsView: View {
     @ObservedObject var viewModel = AlbumListViewModel(client: NetworkClient())
     
+    init() {
+        //Use this if NavigationBarTitle is with Large Font
+        UINavigationBar.appearance().largeTitleTextAttributes = [.foregroundColor: UIColor.white]
+
+        //Use this if NavigationBarTitle is with displayMode = .inline
+        UINavigationBar.appearance().titleTextAttributes = [.foregroundColor: UIColor.white]
+    }
+    
+    
     var body: some View {
-        ZStack {
-            Color.albumRowBGColor
-                .ignoresSafeArea()
+        NavigationView {
             if viewModel.isLoading {
                 progressView
             } else {
-                NavigationView {
-                    albumList
-                }
+                resultsView
             }
         }
         .onAppear {
@@ -28,6 +33,25 @@ struct TopSongsView: View {
         .alert(isPresented: $viewModel.hasError) {
             Alert(title: Text("Alert"), message: Text(viewModel.networkError?.errorDescription() ?? "Some unknown error"), dismissButton: .cancel())
         }
+    }
+    
+    var resultsView: some View {
+        ZStack {
+            Color.albumBGColor
+                .ignoresSafeArea()
+            
+            if let albums = viewModel.album {
+                AlbumsListView(songs: albums.songs)
+                    .refreshable(action: {
+                        getAlbums()
+                    })
+            } else {
+                Text("Oops. unable to fetch albums")
+                    .foregroundColor(.white)
+            }
+        }
+        .navigationTitle("Top 50 Songs")
+        .navigationBarTitleDisplayMode(.inline)
     }
     
     var progressView: some View {
@@ -41,19 +65,6 @@ struct TopSongsView: View {
         .scaleEffect(x: 3, y: 3, anchor: .center)
     }
     
-    var albumList: some View {
-        List {
-            ForEach(Array(zip(viewModel.album.songs.indices, viewModel.album.songs)), id: \.0) { index, album in
-                AlbumRowItemView(index: index, album: album)
-            }
-            .listRowBackground(Color.albumRowBGColor)
-        }
-        .refreshable(action: {
-            getAlbums()
-        })
-        .navigationTitle("Top 50 Songs")
-    }
-    
     var errorView: some View {
         Text("Oops. Unable to get albums")
             .font(.headline)
@@ -61,6 +72,28 @@ struct TopSongsView: View {
     
     func getAlbums() {
         viewModel.getAlbums()
+    }
+}
+
+struct AlbumsListView: View {
+    let songs: [Result]
+    
+    var body: some View {
+        List {
+            ForEach(Array(zip(songs.indices, songs)), id: \.0) { index, album in
+                AlbumRowItemView(index: index, album: album)
+            }
+            .listRowBackground(Color.albumRowBGColor)
+        }
+        .onAppear(perform: {
+            UITableView.appearance().backgroundColor = UIColor(Color.albumRowBGColor)
+        })
+        .onDisappear(perform: {
+            UITableView.appearance().backgroundColor = UIColor(Color.albumRowBGColor)
+        })
+        .navigationTitle("Top 50 Songs")
+        .padding(.vertical)
+
     }
 }
 

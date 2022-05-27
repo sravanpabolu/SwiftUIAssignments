@@ -10,15 +10,15 @@ import Combine
 
 class AlbumListViewModel: ObservableObject {
     
-    private let client: NetworkClient
+    private let client: DataFetchService
     private var cancellable = Set<AnyCancellable>()
     private(set) var networkError: DataFetchError?
     
     @Published var isLoading = false
     @Published var hasError = false
-    @Published private(set) var album: AlbumViewModel = AlbumViewModel(album: Album.init(feed: Feed(title: "", id: "", author: Author(name: "", url: ""), links: [], copyright: "", country: "", icon: "", updated: "", results: [])))
+    @Published private(set) var album: AlbumViewModel? // = AlbumViewModel(album: Album.init(feed: Feed(title: "", id: "", author: Author(name: "", url: ""), links: [], copyright: "", country: "", icon: "", updated: "", results: [])))
     
-    init(client: NetworkClient) {
+    init(client: DataFetchService) {
         self.client = client
     }
     

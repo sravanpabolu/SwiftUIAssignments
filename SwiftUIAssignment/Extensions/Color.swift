@@ -40,6 +40,10 @@ extension Color {
     static var albumTextColor: Color {
         Color(red: 200/255, green: 205/255, blue: 210/255)
     }
+    
+    static var albumBGColor: Color {
+        Color(red: 58/255, green: 63/255, blue: 69/255)
+    }
 }
 
 //MARK: - Chase Bank Statement
