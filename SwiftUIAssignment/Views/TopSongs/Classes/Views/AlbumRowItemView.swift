@@ -26,10 +26,18 @@ struct AlbumRowItemView: View {
             .frame(maxHeight: 100)
             
             HStack {
-                Text("\(index + 1)")
-                    .font(.title3)
-                    .foregroundColor(Color.albumTextColor)
-                    .padding(.horizontal)
+                ZStack {
+                    Circle()
+                        .fill(Color.btnPlayBGColor)
+                        .frame(maxWidth: playBtnDimensions, alignment: .center)
+                        .shadow(color: Color.albumBGColor, radius: 10)
+                    Text("\(index + 1)")
+                        .font(.title3)
+                        .foregroundColor(Color.albumTextColor)
+                        
+                }
+                .padding(.horizontal)
+                
                 Group {
                     AlbumImageView(urlString: album.artworkUrl100)
                     Text("\(album.name)")
