@@ -26,7 +26,7 @@ struct AlbumRowItemView: View {
             .frame(maxHeight: 100)
             
             HStack {
-                Text("\(index)")
+                Text("\(index + 1)")
                     .font(.title3)
                     .foregroundColor(Color.albumTextColor)
                     .padding(.horizontal)
