@@ -16,7 +16,7 @@ struct TransactionViewModel: Identifiable {
         self.transaction = transaction
     }
     
-    var date: String {
+    var date: Date {
         transaction.transactionDate
     }
     

@@ -13,9 +13,10 @@ class TransactionsListViewModel: ObservableObject {
     let client: DataFetchService
     private var cancellable = Set<AnyCancellable>()
     
-    @Published var transactionsList: [TransactionViewModel] = []
     @Published var isLoading = false
     @Published var hasError = false
+    @Published var groupedTransactions = [Date: [TransactionViewModel]]()
+    
     private(set) var networkError: DataFetchError?
     
     init(client: DataFetchService) {
@@ -36,10 +37,7 @@ class TransactionsListViewModel: ObservableObject {
                     }
                 }, receiveValue: { [weak self] allTransactions in
                     self?.hasError = false
-                    self?.transactionsList = allTransactions.transactions.map({
-                        TransactionViewModel(transaction: $0)
-                    })
-                    print(allTransactions)
+                    self?.groupedTransactions = self?.getTransactionsListGroupedByDate(transactions: allTransactions.transactions) ?? [:]
                 })
                 .store(in: &cancellable)
             
@@ -52,5 +50,24 @@ class TransactionsListViewModel: ObservableObject {
             hasError = true
             networkError = DataFetchError.custom(description: error.localizedDescription)
         }
+    }
+    
+    func getTransactionsListGroupedByDate(transactions: [Transaction]) -> [Date: [TransactionViewModel]] {
+        let datesArray = transactions.map {
+            $0.transactionDate
+        }
+        
+        var groupedTransactions = [Date: [TransactionViewModel]]()
+        datesArray.forEach {
+            let dateKey: Date = $0
+            let filterArray = transactions.filter {
+                $0.transactionDate == dateKey
+            }
+            let transactionVMArray = filterArray.map({
+                TransactionViewModel(transaction: $0)
+            })
+            groupedTransactions[dateKey] = transactionVMArray
+        }
+        return groupedTransactions
     }
 }

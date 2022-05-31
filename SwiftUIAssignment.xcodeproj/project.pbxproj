@@ -32,6 +32,7 @@
 		A075388D2834D046008FFF3A /* UserDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A075388C2834D046008FFF3A /* UserDetailsView.swift */; };
 		A075388F2834D45C008FFF3A /* MPINTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = A075388E2834D45C008FFF3A /* MPINTextField.swift */; };
 		A07538942834D5EA008FFF3A /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = A07538932834D5EA008FFF3A /* Color.swift */; };
+		A0808C0B2844D116005DF589 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0808C0A2844D116005DF589 /* Utils.swift */; };
 		A0D911A4283D074E007CB335 /* TopSongsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0D911A3283D074E007CB335 /* TopSongsView.swift */; };
 		A0D911A6283E2D55007CB335 /* AlbumViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0D911A5283E2D55007CB335 /* AlbumViewModel.swift */; };
 		A0D911A8283E2F02007CB335 /* AlbumImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0D911A7283E2F02007CB335 /* AlbumImageView.swift */; };
@@ -70,6 +71,7 @@
 		A075388E2834D45C008FFF3A /* MPINTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MPINTextField.swift; sourceTree = "<group>"; };
 		A07538932834D5EA008FFF3A /* Color.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 		A07606D52841391E003518C6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		A0808C0A2844D116005DF589 /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 		A0D911A3283D074E007CB335 /* TopSongsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TopSongsView.swift; sourceTree = "<group>"; };
 		A0D911A5283E2D55007CB335 /* AlbumViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumViewModel.swift; sourceTree = "<group>"; };
 		A0D911A7283E2F02007CB335 /* AlbumImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumImageView.swift; sourceTree = "<group>"; };
@@ -204,6 +206,7 @@
 			children = (
 				A055AC5C283CCDFA00224CA7 /* NetworkClient.swift */,
 				A0724196283FBD0000E0784C /* LocalClient.swift */,
+				A0808C0A2844D116005DF589 /* Utils.swift */,
 			);
 			path = Reusable;
 			sourceTree = "<group>";
@@ -382,6 +385,7 @@
 				A072419D283FC76000E0784C /* TransactionsListView.swift in Sources */,
 				A0724197283FBD0000E0784C /* LocalClient.swift in Sources */,
 				A07241A1283FEE1400E0784C /* Double.swift in Sources */,
+				A0808C0B2844D116005DF589 /* Utils.swift in Sources */,
 				A0E5CEFF2837574200A0F723 /* BlueButton.swift in Sources */,
 				A0147DB32834C716002E8C70 /* ContentView.swift in Sources */,
 				A0E5CEFB2834F66100A0F723 /* QuickAccessView.swift in Sources */,

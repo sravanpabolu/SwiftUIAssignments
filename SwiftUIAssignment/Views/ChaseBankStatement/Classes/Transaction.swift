@@ -17,7 +17,8 @@ struct Transactions: Codable {
 
 // MARK: - Transaction
 struct Transaction: Codable {
-    let transactionDescription, transactionDate: String
+    let transactionDescription: String
+    let transactionDate: Date
     let amount: Double
     let status: TransactionType
 
@@ -33,7 +34,9 @@ extension Transaction {
         let container = try decoder.container(keyedBy: CodingKeys.self)
 
         self.transactionDescription = try container.decode(String.self, forKey: .transactionDescription)
-        self.transactionDate = try container.decode(String.self, forKey: .transactionDate)
+        
+        let date = try container.decode(String.self, forKey: .transactionDate)
+        self.transactionDate = Utils.shared.stringToDate(dateString: date)
         
         let statusType = try container.decode(String.self, forKey: .status)
         self.status = (statusType == "credit") ? .credit : .debit

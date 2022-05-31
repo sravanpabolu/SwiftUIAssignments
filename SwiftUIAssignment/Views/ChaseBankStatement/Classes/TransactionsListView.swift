@@ -33,9 +33,23 @@ struct TransactionsListView: View {
     }
     
     var transactionsListView: some View {
-        List {
-            ForEach(viewModel.transactionsList, id: \.id) { aTransaction in
-                TransactionRowView(transaction: aTransaction)
+        let keys = viewModel.groupedTransactions.map{$0.key}
+        let values = viewModel.groupedTransactions.map {$0.value}
+        
+        return List {
+            ForEach(0..<keys.count, id: \.self) { index in
+                Section {
+                    ForEach(0..<values[index].count, id: \.self) { subIndex in
+                        TransactionRowView(transaction: values[index][subIndex])
+                    }
+                } header: {
+                    HStack(alignment: .center) {
+                        Spacer()
+                        Text(Utils.shared.dateToString(date: keys[index]))
+                            .multilineTextAlignment(.center)
+                        Spacer()
+                    }
+                }
             }
         }
         .listStyle(.grouped)
