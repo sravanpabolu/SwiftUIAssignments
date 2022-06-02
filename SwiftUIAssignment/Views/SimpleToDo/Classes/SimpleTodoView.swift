@@ -10,6 +10,8 @@ import SwiftUI
 struct SimpleTodoView: View {
     
     @Environment(\.managedObjectContext) private var viewContext
+    @FetchRequest(entity: Task.entity(), sortDescriptors: []) private var tasks: FetchedResults<Task>
+    
     @State private var taskTitle: String = ""
     
     var body: some View {
@@ -22,8 +24,6 @@ struct SimpleTodoView: View {
                 .textFieldStyle(.roundedBorder)
             
             Button {
-                print("Saved")
-                
                 //CoreData entity class
                 let task = Task(context: viewContext)
                 task.title = taskTitle
@@ -39,9 +39,17 @@ struct SimpleTodoView: View {
                     .frame(maxWidth: .infinity)
             }
             .buttonStyle(.borderedProminent)
+            
+            tasksList
 
         }
         .padding()
+    }
+    
+    var tasksList: some View {
+        List(tasks) { aTask in
+            Text(aTask.title ?? "")
+        }
     }
 }
 
