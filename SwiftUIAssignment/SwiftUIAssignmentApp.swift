@@ -14,7 +14,10 @@ struct SwiftUIAssignmentApp: App {
 //            ContentView()
 //            SBICardLoginView()
 //            TopSongsView()
-            TransactionsListView()
+//            TransactionsListView()
+            
+            let viewContext = CoreDataManager.shared.persistentContainer.viewContext
+            SimpleTodoView().environment(\.managedObjectContext, viewContext)
         }
     }
 }
