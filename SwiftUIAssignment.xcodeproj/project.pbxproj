@@ -12,6 +12,9 @@
 		A0147DB52834C718002E8C70 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A0147DB42834C718002E8C70 /* Assets.xcassets */; };
 		A0147DB82834C718002E8C70 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A0147DB72834C718002E8C70 /* Preview Assets.xcassets */; };
 		A0147DC22834CC28002E8C70 /* SBICardLoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0147DC12834CC28002E8C70 /* SBICardLoginView.swift */; };
+		A016A1A928492AF90016C0DA /* TodoModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A016A1A728492AF90016C0DA /* TodoModel.xcdatamodeld */; };
+		A016A1AB28492B750016C0DA /* CoredataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A016A1AA28492B750016C0DA /* CoredataManager.swift */; };
+		A016A1AD28492C800016C0DA /* SimpleTodoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A016A1AC28492C800016C0DA /* SimpleTodoView.swift */; };
 		A055AC54283CC54300224CA7 /* SBICard.png in Resources */ = {isa = PBXBuildFile; fileRef = A055AC53283CC54300224CA7 /* SBICard.png */; };
 		A055AC5D283CCDFA00224CA7 /* NetworkClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = A055AC5C283CCDFA00224CA7 /* NetworkClient.swift */; };
 		A055AC5F283CCF8A00224CA7 /* Enums.swift in Sources */ = {isa = PBXBuildFile; fileRef = A055AC5E283CCF8A00224CA7 /* Enums.swift */; };
@@ -50,6 +53,9 @@
 		A0147DB42834C718002E8C70 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A0147DB72834C718002E8C70 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		A0147DC12834CC28002E8C70 /* SBICardLoginView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SBICardLoginView.swift; sourceTree = "<group>"; };
+		A016A1A828492AF90016C0DA /* TodoModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = TodoModel.xcdatamodel; sourceTree = "<group>"; };
+		A016A1AA28492B750016C0DA /* CoredataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoredataManager.swift; sourceTree = "<group>"; };
+		A016A1AC28492C800016C0DA /* SimpleTodoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleTodoView.swift; sourceTree = "<group>"; };
 		A055AC53283CC54300224CA7 /* SBICard.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SBICard.png; sourceTree = "<group>"; };
 		A055AC5C283CCDFA00224CA7 /* NetworkClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkClient.swift; sourceTree = "<group>"; };
 		A055AC5E283CCF8A00224CA7 /* Enums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Enums.swift; sourceTree = "<group>"; };
@@ -138,11 +144,30 @@
 		A0147DC02834CC28002E8C70 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				A016A1A428492AB90016C0DA /* SimpleToDo */,
 				A072418C283FB36300E0784C /* ChaseBankStatement */,
 				A055AC55283CCCD200224CA7 /* TopSongs */,
 				A075388B2834D046008FFF3A /* SBICard */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		A016A1A428492AB90016C0DA /* SimpleToDo */ = {
+			isa = PBXGroup;
+			children = (
+				A016A1A528492AC80016C0DA /* Classes */,
+			);
+			path = SimpleToDo;
+			sourceTree = "<group>";
+		};
+		A016A1A528492AC80016C0DA /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				A016A1A728492AF90016C0DA /* TodoModel.xcdatamodeld */,
+				A016A1AA28492B750016C0DA /* CoredataManager.swift */,
+				A016A1AC28492C800016C0DA /* SimpleTodoView.swift */,
+			);
+			path = Classes;
 			sourceTree = "<group>";
 		};
 		A055AC51283CC4C700224CA7 /* Classes */ = {
@@ -393,7 +418,9 @@
 				A0E5CF012837751300A0F723 /* YellowViews.swift in Sources */,
 				A0147DB12834C716002E8C70 /* SwiftUIAssignmentApp.swift in Sources */,
 				A072419F283FDB1C00E0784C /* TransactionViewModel.swift in Sources */,
+				A016A1AB28492B750016C0DA /* CoredataManager.swift in Sources */,
 				A0D911A8283E2F02007CB335 /* AlbumImageView.swift in Sources */,
+				A016A1A928492AF90016C0DA /* TodoModel.xcdatamodeld in Sources */,
 				A055AC62283CEBAF00224CA7 /* Album.swift in Sources */,
 				A055AC5F283CCF8A00224CA7 /* Enums.swift in Sources */,
 				A055AC65283CEC2E00224CA7 /* AlbumListViewModel.swift in Sources */,
@@ -403,6 +430,7 @@
 				A0E5CEFD28350A3700A0F723 /* YellowButton.swift in Sources */,
 				A055AC5D283CCDFA00224CA7 /* NetworkClient.swift in Sources */,
 				A0724189283E453000E0784C /* AlbumRowItemView.swift in Sources */,
+				A016A1AD28492C800016C0DA /* SimpleTodoView.swift in Sources */,
 				A07538882834CE75008FFF3A /* Constants.swift in Sources */,
 				A075388F2834D45C008FFF3A /* MPINTextField.swift in Sources */,
 			);
@@ -605,6 +633,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		A016A1A728492AF90016C0DA /* TodoModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				A016A1A828492AF90016C0DA /* TodoModel.xcdatamodel */,
+			);
+			currentVersion = A016A1A828492AF90016C0DA /* TodoModel.xcdatamodel */;
+			path = TodoModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = A0147DA52834C716002E8C70 /* Project object */;
 }
