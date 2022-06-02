@@ -47,8 +47,21 @@ struct SimpleTodoView: View {
     }
     
     var tasksList: some View {
-        List(tasks) { aTask in
-            Text(aTask.title ?? "")
+        List() {
+            ForEach(tasks) { aTask in
+                Text(aTask.title ?? "")
+            }.onDelete { indexSet in
+                indexSet.forEach { index in
+                    let taskToDelete = tasks[index]
+                    viewContext.delete(taskToDelete)
+                    
+                    do {
+                        try viewContext.save()
+                    } catch {
+                        print("Error deleting the task")
+                    }
+                }
+            }
         }
     }
 }
