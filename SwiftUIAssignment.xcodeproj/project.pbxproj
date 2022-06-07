@@ -44,6 +44,9 @@
 		A0E5CEFF2837574200A0F723 /* BlueButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0E5CEFE2837574200A0F723 /* BlueButton.swift */; };
 		A0E5CF012837751300A0F723 /* YellowViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0E5CF002837751200A0F723 /* YellowViews.swift */; };
 		A0E5CF042837BEDC00A0F723 /* ImageButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0E5CF032837BEDC00A0F723 /* ImageButton.swift */; };
+		A0E5E865284DF3DC0082967E /* InterestCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0E5E864284DF3DC0082967E /* InterestCalculator.swift */; };
+		A0E5E867284DF8830082967E /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0E5E866284DF8830082967E /* Date.swift */; };
+		A0EE2F4D284FD3950081236D /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0EE2F4C284FD3950081236D /* String.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -86,6 +89,9 @@
 		A0E5CEFE2837574200A0F723 /* BlueButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlueButton.swift; sourceTree = "<group>"; };
 		A0E5CF002837751200A0F723 /* YellowViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YellowViews.swift; sourceTree = "<group>"; };
 		A0E5CF032837BEDC00A0F723 /* ImageButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageButton.swift; sourceTree = "<group>"; };
+		A0E5E864284DF3DC0082967E /* InterestCalculator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterestCalculator.swift; sourceTree = "<group>"; };
+		A0E5E866284DF8830082967E /* Date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Date.swift; sourceTree = "<group>"; };
+		A0EE2F4C284FD3950081236D /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -144,6 +150,7 @@
 		A0147DC02834CC28002E8C70 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				A0E5E863284DF3B90082967E /* Calculator */,
 				A016A1A428492AB90016C0DA /* SimpleToDo */,
 				A072418C283FB36300E0784C /* ChaseBankStatement */,
 				A055AC55283CCCD200224CA7 /* TopSongs */,
@@ -304,6 +311,8 @@
 				A07538932834D5EA008FFF3A /* Color.swift */,
 				A0724191283FB65900E0784C /* Font.swift */,
 				A07241A0283FEE1400E0784C /* Double.swift */,
+				A0E5E866284DF8830082967E /* Date.swift */,
+				A0EE2F4C284FD3950081236D /* String.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -326,6 +335,14 @@
 				A0E5CF032837BEDC00A0F723 /* ImageButton.swift */,
 			);
 			path = Reusable;
+			sourceTree = "<group>";
+		};
+		A0E5E863284DF3B90082967E /* Calculator */ = {
+			isa = PBXGroup;
+			children = (
+				A0E5E864284DF3DC0082967E /* InterestCalculator.swift */,
+			);
+			path = Calculator;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -413,8 +430,10 @@
 				A0808C0B2844D116005DF589 /* Utils.swift in Sources */,
 				A0E5CEFF2837574200A0F723 /* BlueButton.swift in Sources */,
 				A0147DB32834C716002E8C70 /* ContentView.swift in Sources */,
+				A0E5E865284DF3DC0082967E /* InterestCalculator.swift in Sources */,
 				A0E5CEFB2834F66100A0F723 /* QuickAccessView.swift in Sources */,
 				A07538942834D5EA008FFF3A /* Color.swift in Sources */,
+				A0EE2F4D284FD3950081236D /* String.swift in Sources */,
 				A0E5CF012837751300A0F723 /* YellowViews.swift in Sources */,
 				A0147DB12834C716002E8C70 /* SwiftUIAssignmentApp.swift in Sources */,
 				A072419F283FDB1C00E0784C /* TransactionViewModel.swift in Sources */,
@@ -432,6 +451,7 @@
 				A0724189283E453000E0784C /* AlbumRowItemView.swift in Sources */,
 				A016A1AD28492C800016C0DA /* SimpleTodoView.swift in Sources */,
 				A07538882834CE75008FFF3A /* Constants.swift in Sources */,
+				A0E5E867284DF8830082967E /* Date.swift in Sources */,
 				A075388F2834D45C008FFF3A /* MPINTextField.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
